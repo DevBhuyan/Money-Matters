@@ -17,19 +17,16 @@ A **Streamlit** based dashboard that aggregates a collection of financial calcul
 
 ```bash
 # Clone the repository
-git clone "<repo‑url>"
-cd "Curious Dev B/Compound"
+git clone "https://github.com/DevBhuyan/Compound"
+cd "Compound"
 
 # Create a virtual environment (optional but recommended)
 python -m venv .venv
 source .venv/bin/activate  # on Windows: .venv\Scripts\activate
 
 # Install dependencies
-pip install -r requirements.txt  # if a requirements file exists, otherwise:
-pip install streamlit
+pip install -r requirements.txt
 ```
-
-> **Note**: The project currently depends only on `streamlit`. Additional calculators may have their own dependencies; install them as needed.
 
 ---
 
@@ -46,17 +43,23 @@ Open the URL shown in the terminal (usually `http://localhost:8501`). Use the si
 ## Project Structure
 
 ```
-├── app.py                 # Main Streamlit entry point
-├── calculators.py         # Mapping of calculator names to their configs
-├── finance/               # Individual calculator modules
+.
+├── app.py
+├── calculators.py
+├── decision
+│   ├── goal_based_sip.py
+│   ├── loan_vs_invest.py
+│   ├── prepay_vs_invest.py
+│   └── rent_vs_buy.py
+├── finance
 │   ├── emi.py
 │   ├── loan_prepayment.py
 │   ├── lumpsum.py
 │   ├── repayment_schedule.py
-│   ├── sip.py
-│   └── ...
-├── roadmap.md            # Future feature ideas
-└── README.md              # This file
+│   └── sip.py
+├── LICENSE
+├── README.md
+├── requirements.txt
 ```
 
 ---
@@ -71,7 +74,7 @@ Open the URL shown in the terminal (usually `http://localhost:8501`). Use the si
 
 ## License
 
-This project is licensed under the **MIT License** – see the `LICENSE` file for details.
+This project is licensed under the **Apache 2.0 License** – see the `LICENSE` file for details.
 
 ---
 
